@@ -1,0 +1,23 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB out5
+Abaqus 3DEXPERIENCE R2016x
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server serv08a.
+<7 out of 12 licenses remain available>.
+Begin Analysis Input File Processor
+7/15/2020 10:39:10 PM
+Run pre.exe
+7/15/2020 10:39:12 PM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+7/15/2020 10:39:12 PM
+Run standard.exe
+7/15/2020 10:39:16 PM
+Begin MFS->SFS and SIM cleanup
+7/15/2020 10:39:16 PM
+Run SMASimUtility.exe
+7/15/2020 10:39:17 PM
+End MFS->SFS and SIM cleanup
+Abaqus Error: Abaqus/Standard Analysis exited with an error - Please see the 
+message file for possible error messages if the file exists.
+Abaqus/Analysis exited with errors

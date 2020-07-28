@@ -1,0 +1,1679 @@
+1
+
+   Abaqus 3DEXPERIENCE R2016x                                  Date 15-Jul-2020   Time 22:39:11
+   For use at UNIVERSIDADE ESTADUAL DE CAMPINAS under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   Available for internal use at UNIVERSIDADE ESTADUAL DE CAMPINAS. 
+                   The Abaqus Online Support System is accessible
+                   through the "My Support" section of the SIMULIA
+                   Home Page at http://www.simulia.com.
+
+                   Support policies for academic licenses are described
+                   on the SIMULIA web site at
+                   http://www.3ds.com/products/simulia/academics/
+ 
+                          On machine despos01 
+                          you are authorized to run
+                          Abaqus/Standard until 29-Sep-2021
+
+                          Your site id is: SIT00003270 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                    Abaqus 3DEXPERIENCE R2016x                                   * 
+                *                                                         * 
+                *          BUILD ID: 2015_09_24-17.31.09 126547           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using release 3DEXPERIENCE R2016x manuals    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+                                                                                                                                                                                                                                                                          
+  *Node
+  *Element, type=B21
+  *Nset, nset=ASSEMBLY_PART-1-1_PORTICO
+  *Elset, elset=ASSEMBLY_PART-1-1_PORTICO
+  *Nset, nset=ASSEMBLY_APOIOS
+  *Nset, nset=ASSEMBLY_NO_CENTRAL
+  *material, name=STEEL
+  *elastic
+  *plastic
+  *beamsection, elset=ASSEMBLY_PART-1-1_PORTICO, temperature=GRADIENTS, material=STEEL, section=I-BEAM
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *output, field
+  *output, history
+  *output, field
+  *output, history
+  *output, field
+  *output, history
+  *Step, name=STEP1, nlgeom=YES
+  *output, field
+  *output, history
+  *Step, name=STEP1, nlgeom=YES
+  *Step, name=STEP1, nlgeom=YES
+  *static, riks
+  *boundary
+  *boundary
+  *output, field
+  *output, history
+  *nodeoutput, nset=ASSEMBLY_NO_CENTRAL
+  *nodeprint, nset=ASSEMBLY_NO_CENTRAL, frequency=1, summary=NO
+  *endstep
+  *Step, name=STEP1, nlgeom=YES
+  *static, riks
+  *boundary
+  *boundary
+  *endstep
+
+
+                              E L E M E N T,   N O D E,   A N D   S U R F A C E   M A P S
+
+
+**NOTE: This section may not include complete information about
+        members of sets and surfaces. Use *PREPRINT, MODEL=YES 
+        in order to get the set and surface members printed    
+        under the following sections:                          
+            - E L E M E N T   S E T S                          
+            - N O D E   S E T S                                
+            - S U R F A C E   D E F I N I T I O N S .          
+
+
+Assembly name: ASSEMBLY
+Number of instances: 1
+
+ASSEMBLY LEVEL
+  node sets:
+    APOIOS:
+      instance name: PART-1-1
+      number of nodes: 2
+      nodes: 
+        1 3
+
+    NO_CENTRAL:
+      instance name: PART-1-1
+      number of nodes: 1
+      nodes: 
+        2
+
+  element sets:
+  Surfaces:
+
+INSTANCE LEVEL
+  node sets:
+    Instance name: PART-1-1
+      node set name: PORTICO
+        number of nodes: 21
+        nodes: 
+          1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+
+  element sets:
+    Instance name: PART-1-1
+      element set name: PORTICO
+        number of elements: 20
+        elements: 
+          1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+  Surfaces:
+
+GLOBAL TO LOCAL NODE AND ELEMENT MAPS
+  Global     Local      
+  node       node       
+  number     number     
+                        Instance name                                   
+   1          1         PART-1-1                                        
+   2          2         PART-1-1                                        
+   3          3         PART-1-1                                        
+   4          4         PART-1-1                                        
+   5          5         PART-1-1                                        
+   6          6         PART-1-1                                        
+   7          7         PART-1-1                                        
+   8          8         PART-1-1                                        
+   9          9         PART-1-1                                        
+   10         10        PART-1-1                                        
+   11         11        PART-1-1                                        
+   12         12        PART-1-1                                        
+   13         13        PART-1-1                                        
+   14         14        PART-1-1                                        
+   15         15        PART-1-1                                        
+   16         16        PART-1-1                                        
+   17         17        PART-1-1                                        
+   18         18        PART-1-1                                        
+   19         19        PART-1-1                                        
+   20         20        PART-1-1                                        
+   21         21        PART-1-1                                        
+
+  Global     Local      
+  element    element    
+  number     number     
+                        Instance name                                   
+   1          1         PART-1-1                                        
+   2          2         PART-1-1                                        
+   3          3         PART-1-1                                        
+   4          4         PART-1-1                                        
+   5          5         PART-1-1                                        
+   6          6         PART-1-1                                        
+   7          7         PART-1-1                                        
+   8          8         PART-1-1                                        
+   9          9         PART-1-1                                        
+   10         10        PART-1-1                                        
+   11         11        PART-1-1                                        
+   12         12        PART-1-1                                        
+   13         13        PART-1-1                                        
+   14         14        PART-1-1                                        
+   15         15        PART-1-1                                        
+   16         16        PART-1-1                                        
+   17         17        PART-1-1                                        
+   18         18        PART-1-1                                        
+   19         19        PART-1-1                                        
+   20         20        PART-1-1                                        
+
+LOCAL TO GLOBAL NODE AND ELEMENT MAPS
+                                                  Local      Global     
+                                                  node       node       
+                                                  number     number
+  Instance name
+  PART-1-1                                         1          1         
+  PART-1-1                                         2          2         
+  PART-1-1                                         3          3         
+  PART-1-1                                         4          4         
+  PART-1-1                                         5          5         
+  PART-1-1                                         6          6         
+  PART-1-1                                         7          7         
+  PART-1-1                                         8          8         
+  PART-1-1                                         9          9         
+  PART-1-1                                         10         10        
+  PART-1-1                                         11         11        
+  PART-1-1                                         12         12        
+  PART-1-1                                         13         13        
+  PART-1-1                                         14         14        
+  PART-1-1                                         15         15        
+  PART-1-1                                         16         16        
+  PART-1-1                                         17         17        
+  PART-1-1                                         18         18        
+  PART-1-1                                         19         19        
+  PART-1-1                                         20         20        
+  PART-1-1                                         21         21        
+
+                                                  Local      Global     
+                                                  element    element    
+                                                  number     number
+  Instance name
+  PART-1-1                                         1          1         
+  PART-1-1                                         2          2         
+  PART-1-1                                         3          3         
+  PART-1-1                                         4          4         
+  PART-1-1                                         5          5         
+  PART-1-1                                         6          6         
+  PART-1-1                                         7          7         
+  PART-1-1                                         8          8         
+  PART-1-1                                         9          9         
+  PART-1-1                                         10         10        
+  PART-1-1                                         11         11        
+  PART-1-1                                         12         12        
+  PART-1-1                                         13         13        
+  PART-1-1                                         14         14        
+  PART-1-1                                         15         15        
+  PART-1-1                                         16         16        
+  PART-1-1                                         17         17        
+  PART-1-1                                         18         18        
+  PART-1-1                                         19         19        
+  PART-1-1                                         20         20        
+
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    20
+          NUMBER OF NODES IS                                       61
+          NUMBER OF NODES DEFINED BY THE USER                      21
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        40
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   63
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   0.0000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          1
+1
+
+   Abaqus 3DEXPERIENCE R2016x                                  Date 15-Jul-2020   Time 22:39:13
+   For use at UNIVERSIDADE ESTADUAL DE CAMPINAS under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC LOAD CONTROL WITH -
+          A SUGGESTED INITIAL INCREMENT IN ARC LENGTH            1.00    
+          AND A TOTAL ARC LENGTH SCALE FACTOR OF                 1.00    
+          THE MINIMUM ARC LENGTH INCREMENT ALLOWED IS           1.000E-03
+          THE MAXIMUM ARC LENGTH INCREMENT ALLOWED IS           1.000E+36
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+     MODIFIED RIKS METHOD IS USED - AMPLITUDE REFERENCES ARE IGNORED
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         3.25E+003               17                 24
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                                INCREMENT     1 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         2.4415E-04
+     TOTAL ARC LENGTH   1.562E-02, INCREMENT OF ARC LENGTH   1.562E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.8311299E-01 -2.6220994E+05 
+
+
+                                INCREMENT     2 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         4.8832E-04
+     TOTAL ARC LENGTH   3.125E-02, INCREMENT OF ARC LENGTH   1.562E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -3.6624080E-01 -5.2444391E+05 
+
+
+                                INCREMENT     3 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         8.5461E-04
+     TOTAL ARC LENGTH   5.469E-02, INCREMENT OF ARC LENGTH   2.344E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -6.4095998E-01 -9.1783928E+05 
+
+
+                                INCREMENT     4 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.4041E-03
+     TOTAL ARC LENGTH   8.984E-02, INCREMENT OF ARC LENGTH   3.516E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0530993E+00 -1.5080301E+06 
+
+
+                                INCREMENT     5 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         2.2286E-03
+     TOTAL ARC LENGTH   0.143    , INCREMENT OF ARC LENGTH   5.273E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.6714403E+00 -2.3935279E+06 
+
+
+                                INCREMENT     6 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         3.4656E-03
+     TOTAL ARC LENGTH   0.222    , INCREMENT OF ARC LENGTH   7.910E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.5992312E+00 -3.7222197E+06 
+
+
+                                INCREMENT     7 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         5.3220E-03
+     TOTAL ARC LENGTH   0.340    , INCREMENT OF ARC LENGTH   0.119    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -3.9914749E+00 -5.7161321E+06 
+
+
+                                INCREMENT     8 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         8.1077E-03
+     TOTAL ARC LENGTH   0.518    , INCREMENT OF ARC LENGTH   0.178    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -6.0807752E+00 -8.7084171E+06 
+
+
+                                INCREMENT     9 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.2287E-02
+     TOTAL ARC LENGTH   0.785    , INCREMENT OF ARC LENGTH   0.267    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -9.2152121E+00 -1.3197319E+07 
+
+
+                                INCREMENT    10 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.2507E-02
+     TOTAL ARC LENGTH   0.810    , INCREMENT OF ARC LENGTH   2.503E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -9.3803985E+00 -1.3433867E+07 
+
+
+                                INCREMENT    11 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.2838E-02
+     TOTAL ARC LENGTH   0.848    , INCREMENT OF ARC LENGTH   3.754E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -9.6281532E+00 -1.3788646E+07 
+
+
+                                INCREMENT    12 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.3332E-02
+     TOTAL ARC LENGTH   0.904    , INCREMENT OF ARC LENGTH   5.631E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -9.9988365E+00 -1.4316601E+07 
+
+
+                                INCREMENT    13 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.3501E-02
+     TOTAL ARC LENGTH   0.989    , INCREMENT OF ARC LENGTH   8.447E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0125512E+01 -1.4372846E+07 
+
+
+                                INCREMENT    14 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.3671E-02
+     TOTAL ARC LENGTH    1.12    , INCREMENT OF ARC LENGTH   0.127    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0253055E+01 -1.4355109E+07 
+
+
+                                INCREMENT    15 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.3909E-02
+     TOTAL ARC LENGTH    1.31    , INCREMENT OF ARC LENGTH   0.190    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0431901E+01 -1.4300972E+07 
+
+
+                                INCREMENT    16 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.4257E-02
+     TOTAL ARC LENGTH    1.59    , INCREMENT OF ARC LENGTH   0.285    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0692607E+01 -1.4164600E+07 
+
+
+                                INCREMENT    17 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.4796E-02
+     TOTAL ARC LENGTH    2.02    , INCREMENT OF ARC LENGTH   0.428    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.1096895E+01 -1.3968076E+07 
+
+
+                                INCREMENT    18 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.5656E-02
+     TOTAL ARC LENGTH    2.66    , INCREMENT OF ARC LENGTH   0.641    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.1741906E+01 -1.3686740E+07 
+
+
+                                INCREMENT    19 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.7076E-02
+     TOTAL ARC LENGTH    3.62    , INCREMENT OF ARC LENGTH   0.962    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.2807040E+01 -1.3255262E+07 
+
+
+                                INCREMENT    20 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         1.9513E-02
+     TOTAL ARC LENGTH    5.06    , INCREMENT OF ARC LENGTH    1.44    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.4634606E+01 -1.2593084E+07 
+
+
+                                INCREMENT    21 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         2.3732E-02
+     TOTAL ARC LENGTH    7.23    , INCREMENT OF ARC LENGTH    2.16    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.7799309E+01 -1.1710124E+07 
+
+
+                                INCREMENT    22 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         3.1236E-02
+     TOTAL ARC LENGTH    10.5    , INCREMENT OF ARC LENGTH    3.25    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.3427035E+01 -1.0587364E+07 
+
+
+                                INCREMENT    23 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         4.4734E-02
+     TOTAL ARC LENGTH    15.3    , INCREMENT OF ARC LENGTH    4.87    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -3.3550421E+01 -9.2583455E+06 
+
+
+                                INCREMENT    24 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         6.9179E-02
+     TOTAL ARC LENGTH    22.7    , INCREMENT OF ARC LENGTH    7.31    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -5.1884312E+01 -7.8048022E+06 
+
+
+                                INCREMENT    25 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         8.4779E-02
+     TOTAL ARC LENGTH    25.4    , INCREMENT OF ARC LENGTH    2.74    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -6.3584606E+01 -7.1797453E+06 
+
+
+                                INCREMENT    26 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1103    
+     TOTAL ARC LENGTH    29.5    , INCREMENT OF ARC LENGTH    4.11    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -8.2751213E+01 -6.4185794E+06 
+
+
+                                INCREMENT    27 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1257    
+     TOTAL ARC LENGTH    31.0    , INCREMENT OF ARC LENGTH    1.54    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -9.4282198E+01 -6.0618955E+06 
+
+
+                                INCREMENT    28 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1346    
+     TOTAL ARC LENGTH    31.6    , INCREMENT OF ARC LENGTH   0.578    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.0098422E+02 -5.8795329E+06 
+
+
+                                INCREMENT    29 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1484    
+     TOTAL ARC LENGTH    32.5    , INCREMENT OF ARC LENGTH   0.867    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.1131422E+02 -5.6271957E+06 
+
+
+                                INCREMENT    30 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1563    
+     TOTAL ARC LENGTH    32.8    , INCREMENT OF ARC LENGTH   0.325    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.1726128E+02 -5.4954410E+06 
+
+
+                                INCREMENT    31 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1685    
+     TOTAL ARC LENGTH    33.3    , INCREMENT OF ARC LENGTH   0.488    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.2636018E+02 -5.3098860E+06 
+
+
+                                INCREMENT    32 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1754    
+     TOTAL ARC LENGTH    33.5    , INCREMENT OF ARC LENGTH   0.183    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.3156636E+02 -5.2115109E+06 
+
+
+                                INCREMENT    33 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.1860    
+     TOTAL ARC LENGTH    33.8    , INCREMENT OF ARC LENGTH   0.274    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.3949268E+02 -5.0711211E+06 
+
+
+                                INCREMENT    34 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2022    
+     TOTAL ARC LENGTH    34.2    , INCREMENT OF ARC LENGTH   0.411    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.5162956E+02 -4.8755652E+06 
+
+
+                                INCREMENT    35 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2114    
+     TOTAL ARC LENGTH    34.3    , INCREMENT OF ARC LENGTH   0.154    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.5857998E+02 -4.7727168E+06 
+
+
+                                INCREMENT    36 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2167    
+     TOTAL ARC LENGTH    34.4    , INCREMENT OF ARC LENGTH   5.786E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.6252644E+02 -4.7170164E+06 
+
+
+                                INCREMENT    37 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2247    
+     TOTAL ARC LENGTH    34.5    , INCREMENT OF ARC LENGTH   8.679E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.6849693E+02 -4.6359808E+06 
+
+
+                                INCREMENT    38 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2367    
+     TOTAL ARC LENGTH    34.6    , INCREMENT OF ARC LENGTH   0.130    
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.7755938E+02 -4.5201555E+06 
+
+
+                                INCREMENT    39 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2436    
+     TOTAL ARC LENGTH    34.6    , INCREMENT OF ARC LENGTH   4.882E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.8271146E+02 -4.4577813E+06 
+
+
+                                INCREMENT    40 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2540    
+     TOTAL ARC LENGTH    34.7    , INCREMENT OF ARC LENGTH   7.323E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.9051067E+02 -4.3677593E+06 
+
+
+                                INCREMENT    41 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2599    
+     TOTAL ARC LENGTH    34.8    , INCREMENT OF ARC LENGTH   2.746E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -1.9493403E+02 -4.3188710E+06 
+
+
+                                INCREMENT    42 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2688    
+     TOTAL ARC LENGTH    34.8    , INCREMENT OF ARC LENGTH   4.119E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.0161669E+02 -4.2478125E+06 
+
+
+                                INCREMENT    43 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2739    
+     TOTAL ARC LENGTH    34.8    , INCREMENT OF ARC LENGTH   1.545E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.0540018E+02 -4.2089666E+06 
+
+
+                                INCREMENT    44 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2815    
+     TOTAL ARC LENGTH    34.8    , INCREMENT OF ARC LENGTH   2.317E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.1110759E+02 -4.1521895E+06 
+
+
+                                INCREMENT    45 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2858    
+     TOTAL ARC LENGTH    34.8    , INCREMENT OF ARC LENGTH   8.689E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.1433398E+02 -4.1210714E+06 
+
+
+                                INCREMENT    46 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2923    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.303E-02
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.1919727E+02 -4.0751787E+06 
+
+
+                                INCREMENT    47 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.2959    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   4.888E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.2194329E+02 -4.0499731E+06 
+
+
+                                INCREMENT    48 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3014    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   7.331E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.2607892E+02 -4.0126485E+06 
+
+
+                                INCREMENT    49 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3045    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   2.749E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.2841222E+02 -3.9920880E+06 
+
+
+                                INCREMENT    50 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3092    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   4.124E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.3192392E+02 -3.9615395E+06 
+
+
+                                INCREMENT    51 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3163    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   6.186E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.3721383E+02 -3.9167872E+06 
+
+
+                                INCREMENT    52 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3203    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   2.320E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.4020145E+02 -3.8920926E+06 
+
+
+                                INCREMENT    53 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3263    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   3.479E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.4469862E+02 -3.8557271E+06 
+
+
+                                INCREMENT    54 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3296    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.305E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.4723660E+02 -3.8355893E+06 
+
+
+                                INCREMENT    55 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3347    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.957E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.5105437E+02 -3.8058471E+06 
+
+
+                                INCREMENT    56 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3387    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.000E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.5398914E+02 -3.7833905E+06 
+
+
+                                INCREMENT    57 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3445    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.500E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.5840527E+02 -3.7502769E+06 
+
+
+                                INCREMENT    58 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3505    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.000E-03
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.6283803E+02 -3.7178003E+06 
+
+
+                                INCREMENT    59 SUMMARY
+
+
+     CURRENT LOAD PROPORTIONALITY FACTOR         0.3505    
+     TOTAL ARC LENGTH    34.9    , INCREMENT OF ARC LENGTH   1.000E-35
+  
+  
+  
+  
+                                       N O D E   O U T P U T
+  
+  
+  
+  
+   THE FOLLOWING TABLE IS PRINTED FOR NODES BELONGING TO NODE SET ASSEMBLY_NO_CENTRAL
+  
+       NODE FOOT-  U2             RF2          
+            NOTE
+  
+         2     -2.6283803E+02 -3.7178003E+06 
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      2 ERROR MESSAGES ON THE MSG FILE
+                              AND     116 WARNING MESSAGES ON THE MSG FILE
+                                        3 WARNINGS ARE FOR NUMERICAL PROBLEMS
+                                       44 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   2.8000    
+       SYSTEM TIME (SEC)    =  0.50000    
+       TOTAL CPU TIME (SEC) =   3.3000    
+       WALLCLOCK TIME (SEC) =          3

@@ -1,0 +1,114 @@
+*HEADING
+
+*Preprint, echo=NO, model=NO, history=NO, contact=NO
+**
+**PARTS
+**
+*Part, name=Part-1
+*Node
+1,0.00,0.00 
+2,0.00,6000.00 
+3,6000.00,6000.00 
+4,0.00,600.00 
+5,0.00,1200.00 
+6,0.00,1800.00 
+7,0.00,2400.00 
+8,0.00,3000.00 
+9,0.00,3600.00 
+10,0.00,4200.00 
+11,0.00,4800.00 
+12,0.00,5400.00 
+13,600.00,6000.00 
+14,1200.00,6000.00 
+15,1800.00,6000.00 
+16,2400.00,6000.00 
+17,3000.00,6000.00 
+18,3600.00,6000.00 
+19,4200.00,6000.00 
+20,4800.00,6000.00 
+21,5400.00,6000.00 
+*Element, type=B21
+1,1,4 
+2,4,5 
+3,5,6 
+4,6,7 
+5,7,8 
+6,8,9 
+7,9,10 
+8,10,11 
+9,11,12 
+10,12,2 
+11,2,13 
+12,13,14 
+13,14,15 
+14,15,16 
+15,16,17 
+16,17,18 
+17,18,19 
+18,19,20 
+19,20,21 
+20,21,3 
+*Nset, nset=PORTICO, generate
+1,21,1 
+*Elset, elset=PORTICO, generate
+1,20,1 
+**Section: Section-W310x283 Profile: Profile-W310x283
+*Beam Section, elset=PORTICO, material=Steel, temperature=GRADIENTS, section=I
+188.00,366.00,323.00,323.00,44.20,44.20,26.90 
+0,0,-1 
+*End Part
+**
+**ASSEMBLY
+**
+*Assembly, name=Assembly
+**
+*Instance, name=Part-1-1, part=Part-1
+*End Instance
+**
+*Nset, nset=APOIOS, instance=Part-1-1
+1,3 
+*Nset, nset=NO_CENTRAL, instance=Part-1-1
+2 
+*End Assembly
+**
+**MATERIALS
+**
+*Material, name=Steel
+*Elastic
+modulo_elasticidade,0.30 
+*Plastic
+tensao_escoamento,0.00 
+** ----------------------------------------------------------------
+**
+**STEP: STEP1
+**
+*Step, name=STEP1, nlgeom=YES
+*Static, riks
+1,1,0.0010,  ,  ,   
+**
+**BOUNDARY CONDITIONS
+**
+** Name: APOIOS Type: Displacement/Rotation
+*Boundary
+APOIOS,1,1 
+APOIOS,2,2 
+** Name: DESLOC_CENTRAL Type: Displacement/Rotation
+*Boundary
+NO_CENTRAL,2,2,-750.00 
+**
+**OUTPUT REQUESTS
+**
+*Restart, write, frequency=0
+**
+FIELD OUTPUT: F-Output-1
+**
+*Output, field
+**
+**HISTORY OUTPUT: H-Output-1
+**
+*Output, history
+*NODE OUTPUT, NSET=NO_CENTRAL
+U,RF
+*NODE PRINT, NSET=NO_CENTRAL, FREQUENCY=1, SUMMARY=NO
+U2,RF2
+*End Step
